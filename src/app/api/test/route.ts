@@ -1,0 +1,1 @@
+import { NextResponse } from 'next/server'; import { createProductAction } from '@/server/actions/productActions'; export async function GET() { const res = await createProductAction({ name: 'Test Product ' + Date.now(), price: 100, status: 'active', isFeatured: true }); return NextResponse.json(res); }
